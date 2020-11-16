@@ -30,15 +30,16 @@ const BackgroundFilter = styled.div`
 `;
 const SloganTxt = styled.h1`
   margin:0;
-  font-size:33px;
+  font-size:calc(10px + 2vw);
   font-weight:700;
   line-height:1.4;
   color:white;
+  text-align:center;
 `;
 
 const DownArrowContainer = styled.div`
   position:absolute;
-  bottom:30px;
+  bottom:2vh;
   left:50%;
   transform: translate(-50%);
   cursor: pointer;
@@ -48,14 +49,14 @@ function TopSection() {
   return (
     <TopContainer>
       <BackgroundFilter>
-        <Marginer direction="vertical" margin="8em" />
+        <Marginer direction="vertical" margin="9vh" />
         <Logo/>
-        <Marginer direction="vertical" margin="4em" />
+        <Marginer direction="vertical" margin="3vh" />
         <SloganTxt>ENTRETIEN MÉNAGER COMMERCIAL</SloganTxt>
         <SloganTxt>ET INDUSTRIEL</SloganTxt>
-        <Marginer direction="vertical" margin="4em" />
-        <Button>OBTENIR UNE ESTIMATION</Button>
-         <Marginer direction="vertical" margin="4em" />
+        <Marginer direction="vertical" margin="4vh" />
+        <Button size='big'>OBTENIR UNE ESTIMATION</Button>
+         <Marginer direction="vertical" margin="2vh" />
          <Social></Social>
         <DownArrowContainer>
           <DownArrow />

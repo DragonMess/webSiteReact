@@ -6,8 +6,8 @@ import { theme } from '../../theme';
 
 
 const ArrowContainer = styled.div`
-  width:46px;
-  height:46px;
+  width:5vh;
+  height:5vh;
   border-radius:50%;
   background-color:rgba(113,113,113,0.48);
   display:flex;
