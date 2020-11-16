@@ -39,24 +39,33 @@ const LinksWrapper = styled.div`
     min-width:100%;
     min-height:40vh;
     position:absolute;
-    top:80px;
+    top:7vh;
     /* left:0; */
     left:${({click}) => (!click ? "0" : '-1000px')};
     opacity:1;
     transition: all .5s ease;
-    background-color:${theme.logo};
+    background:rgba(55,55,55,0.92);
+
   }
 `;
 const LinksTxt = styled(Link)`
   color:white;
-  font-size:calc(2px + 1.2vh);
+  font-size:calc(2px + 1.5vh);
   text-decoration:none;
+  &:hover, :focus{
+    color:${theme.logo};
+    font-weight:bold;
+  }
   @media screen and (max-width:960px){
     /* display:table; */
     font-size:1.7vh;
     margin-bottom:20px;
     margin-top:20px;
-    
+      &:hover,&:focus{
+    color:black;
+    font-weight:bold;
+    font-size:3vh;
+  }
   }
 `;
 const MobileIcon = styled.div`
