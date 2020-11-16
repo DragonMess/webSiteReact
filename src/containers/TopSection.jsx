@@ -1,4 +1,5 @@
 import React from 'react'
+import { Element, scroller } from 'react-scroll';
 import styled from 'styled-components'
 import backgroundImg from '../assets/pictures/buildings.jpg'
 import Button from '../components/button';
@@ -52,7 +53,13 @@ const DownArrowContainer = styled.div`
 `;
 
 function TopSection() {
+
+  const scrollDownNext = () => {
+    scroller.scrollTo("servicesSection",{smooth:true, duration:1500})
+  }
+
   return (
+    <Element name="topSection">
     <TopContainer>
       <BackgroundFilter>
         <Marginer direction="vertical" margin="9vh" />
@@ -64,12 +71,13 @@ function TopSection() {
         <Button size='big'>OBTENIR UNE ESTIMATION</Button>
          <Marginer direction="vertical" margin="2vh" />
          <Social></Social>
-        <DownArrowContainer>
+        <DownArrowContainer onClick={scrollDownNext}>
           <DownArrow />
         </DownArrowContainer>
       </BackgroundFilter>
 
     </TopContainer>
+    </Element>
   )
 }
 
