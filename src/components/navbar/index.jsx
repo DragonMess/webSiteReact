@@ -8,14 +8,19 @@ import Logo from '../logo';
 import { Marginer } from '../marginer';
 
 const NavBarWrapper = styled.div`
-  /* position:fixed; */
+  position:fixed;
   top:0;
   width:100%;
   min-height:7vh;
-  /* z-index:1; */
+  z-index:1;
   background-color:#3a3939;
   display:flex;
   justify-content:space-between;
+    /* @media screen and (max-width:960px){
+    widht:100%;
+    height:90vh;
+    background-color:green;
+  } */
 `;
 const BrandWrapper = styled.div`
   display:flex;
@@ -27,19 +32,20 @@ const LinksWrapper = styled.div`
   flex-direction:row;
   justify-content:space-between;
   align-items:center;
-  text-align:center;
-  @media screen and (max-width:960){
+  /* text-align:center; */
+  @media screen and (max-width:960px){
     display:flex;
-    flex-wrap:wrap;
+    /* flex-wrap:wrap; */
     flex-direction:column;
     width:100%;
-    height:90vh;
+    min-height:30vh;
     position:absolute;
     top:80px;
-    left:${({click}) => (click ? 0 : "-100%")};
+    /* left:0; */
+    left:${({click}) => (!click ? "0" : '-1000px')};
     opacity:1;
     transition: all .5s ease;
-    background-color:${theme.logo}
+    background-color:${theme.gris};
   }
 `;
 const LinksTxt = styled(Link)`
@@ -64,13 +70,14 @@ const MobileIcon = styled.div`
   }
 `;
 
-function Navbar(porps) {
+function Navbar(props) {
 
-  const [click , setClick] =useState(false);
+  const [click , setClick] =useState(true);
 
   const handleClick = ()=> {
     setClick(!click);
   }
+  console.log(click)
   return (
     <NavBarWrapper>
       <Marginer direction="horizontal" margin="0" />
@@ -79,8 +86,8 @@ function Navbar(porps) {
       </BrandWrapper>
         <MobileIcon onClick={handleClick}>{click? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faTimes} />}
         </MobileIcon>
-      <LinksWrapper onClick={handleClick}>
-        <LinksTxt to="/services">SERVICES</LinksTxt>
+      <LinksWrapper click={click}>
+        <LinksTxt to="">SERVICES</LinksTxt>
         <LinksTxt>SOUMISSION</LinksTxt>
         <LinksTxt>À PROPOS</LinksTxt>
         <LinksTxt>CONTACT</LinksTxt>
