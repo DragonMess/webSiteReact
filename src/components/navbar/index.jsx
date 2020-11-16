@@ -35,17 +35,16 @@ const LinksWrapper = styled.div`
   /* text-align:center; */
   @media screen and (max-width:960px){
     display:flex;
-    /* flex-wrap:wrap; */
     flex-direction:column;
-    width:100%;
-    min-height:30vh;
+    min-width:100%;
+    min-height:40vh;
     position:absolute;
     top:80px;
     /* left:0; */
     left:${({click}) => (!click ? "0" : '-1000px')};
     opacity:1;
     transition: all .5s ease;
-    background-color:${theme.gris};
+    background-color:${theme.logo};
   }
 `;
 const LinksTxt = styled(Link)`
@@ -53,19 +52,24 @@ const LinksTxt = styled(Link)`
   font-size:calc(2px + 1.2vh);
   text-decoration:none;
   @media screen and (max-width:960px){
-    widht:100%;
-    display:table;
+    /* display:table; */
+    font-size:1.7vh;
+    margin-bottom:20px;
+    margin-top:20px;
+    
   }
 `;
 const MobileIcon = styled.div`
   display:none;
+  color:white;
   @media screen and (max-width:960px){
     display:block;
     position:absolute;
     top:0;
     right:0;
     transform:translate(-100,60%);
-    font-size:1.8rem;
+    font-size:2vh;
+    text-align:center;  
     cursor: pointer;
   }
 `;

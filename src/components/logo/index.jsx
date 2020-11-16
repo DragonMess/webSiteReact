@@ -7,6 +7,9 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction:${({inLine})=> (inLine ? "row" : "column" )};
   align-items:center;
+    @media screen and (max-width:960px){
+    padding-top:${({inLine})=> (inLine ? "0vh" : "15vh" )};
+  }
 `;
 
 const LogoImg = styled.img`
@@ -14,6 +17,7 @@ const LogoImg = styled.img`
   width:${({inLine})=> (inLine ? "1.5em" : "8em" )};
   height:${({inLine})=> (inLine ? "1.5em" : "8em" )};
   margin-left:${({inLine})=> (inLine ? "5px" : "0" )};
+
 `;
 const LogoTxt = styled.div`
   margin-top:${({inLine})=> (inLine ? "0" : "6px" )};

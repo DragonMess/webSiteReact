@@ -6,7 +6,6 @@ import DownArrow from '../components/downArrow';
 import Logo from '../components/logo';
 import { Marginer } from '../components/marginer';
 import Social from '../components/social';
-import {theme} from '../theme.js'
 
 const TopContainer = styled.div`
   width:100%;
@@ -16,7 +15,11 @@ const TopContainer = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   // background-size: cover;
-  background-size: 100% 100%;
+  background-size: 100% 100%;   
+
+   @media screen and (max-width:960px){
+    /* height:80vh; */
+  }
 `;
 const BackgroundFilter = styled.div`
   width:100%;
@@ -43,6 +46,9 @@ const DownArrowContainer = styled.div`
   left:50%;
   transform: translate(-50%);
   cursor: pointer;
+  @media screen and (max-width:960px){
+    bottom:10vh;
+  }
 `;
 
 function TopSection() {
