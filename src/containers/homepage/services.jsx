@@ -18,7 +18,7 @@ function ServicesSection(porps) {
     <ServicesContainer name="servicesSection">
 
       <SectionTitle>Servies</SectionTitle>
-      <Marginer direction="vertical" margin="2vh" />
+      {/* <Marginer direction="vertical" margin="2vh" /> */}
       <OurService></OurService>
       
     </ServicesContainer>
