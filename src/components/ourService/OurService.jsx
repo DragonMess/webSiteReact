@@ -4,13 +4,12 @@ import { Marginer } from '../marginer';
 import Office  from '../../assets/pictures/Offices.jpg'
 
 const ServiceWrap = styled.section`
-  /* margin-left:10%; */
-  /* margin-right:auto; */
+  margin-left:auto;
+  margin-right:auto;
   display:flex;
-  /* flex-direction:row; */
-  justify-content:center;
-  width:100%;
+  width:70%;
   height:30vh;
+  margin-bottom:10vh;
   &:hover{
     background:green;
   }
@@ -18,7 +17,8 @@ const ServiceWrap = styled.section`
 const Service = styled.div`
   display:flex;
   flex-direction:column;
-  width:40%;
+  max-width:100vw;
+  background-color:red;
 `;
 const Title = styled.h3`
   font-size:4vh;
@@ -35,12 +35,11 @@ const Description = styled.p`
 `;
 const ServiceImg = styled.div`
   display:fex;
-  /* justify-content:left;
-  right:0; */
-  width:50%;
-  /* height:90%; */
-  background:url('${Office}') no-repeat;
+  min-width:30vw;
+  background:url('${Office}') no-repeat right;
   background-size: contain;
+  background-color:rgba(55,55,55,0.5);
+  opacity: 0.3;
   /* margin-left:10%; */
   /* background-color:rgba(55,55,55,0.89); */
 `;
@@ -49,7 +48,13 @@ function OurService(props) {
   return (
     <div>
     <ServiceWrap>
-      {/* <Marginer direction="horizontal" margin="10vh" /> */}
+      <Service>
+        <Title>Entretien Comercial</Title>
+        <Description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!</Description>
+      </Service>
+      <ServiceImg ></ServiceImg>
+    </ServiceWrap>
+        <ServiceWrap>
       <Service>
         <Title>Entretien Comercial</Title>
         <Description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!</Description>

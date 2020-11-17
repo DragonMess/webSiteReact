@@ -6,7 +6,7 @@ const Title = styled.h2`
   font-size:34px;
   font-weight:700;
   color:black;
-  text-align:center;
+  /* text-align:center; */
 `;
 
 function SectionTitle(props) {

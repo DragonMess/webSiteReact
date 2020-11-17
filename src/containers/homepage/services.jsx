@@ -10,15 +10,15 @@ const ServicesContainer = styled(Element)`
   min-height:1500px;
   display:flex;
   flex-direction:column;
+  align-items:center;
   padding: 10px 0;
 `;
 
 function ServicesSection(porps) {
   return (
     <ServicesContainer name="servicesSection">
-
       <SectionTitle>Servies</SectionTitle>
-      {/* <Marginer direction="vertical" margin="2vh" /> */}
+    
       <OurService></OurService>
       
     </ServicesContainer>
