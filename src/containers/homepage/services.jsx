@@ -17,8 +17,7 @@ const ServicesContainer = styled(Element)`
 function ServicesSection(porps) {
   return (
     <ServicesContainer name="servicesSection">
-      <SectionTitle>Servies</SectionTitle>
-    
+      <SectionTitle>Services</SectionTitle>
       <OurService></OurService>
       
     </ServicesContainer>

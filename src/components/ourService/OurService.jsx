@@ -6,19 +6,31 @@ import Office  from '../../assets/pictures/Offices.jpg'
 const ServiceWrap = styled.section`
   margin-left:auto;
   margin-right:auto;
+  padding-left:3vh;
   display:flex;
+  flex-direction:row;
   width:70%;
-  height:30vh;
+  min-height:30vh;
   margin-bottom:10vh;
+    background-size: contain;
+  /* background-color:rgba(55,55,55,0.5); */
+  border-radius:2vh;
+  /* opacity: 0.9; */
   &:hover{
-    background:green;
+    /* background:green; */
+  }
+  @media screen and (max-width:960px){
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:90vh;
   }
 `;
 const Service = styled.div`
   display:flex;
   flex-direction:column;
   max-width:100vw;
-  background-color:red;
+
 `;
 const Title = styled.h3`
   font-size:4vh;
@@ -31,17 +43,23 @@ const Description = styled.p`
   font-weight:300;
   text-align:center;
   color:#7A7A7A;
-  /* margin:2vh 0 0 0; */
+  color:white;
+  margin:0;
 `;
 const ServiceImg = styled.div`
-  display:fex;
+  border-radius:2vh;
+  /* display:fex; */
   min-width:30vw;
   background:url('${Office}') no-repeat right;
   background-size: contain;
-  background-color:rgba(55,55,55,0.5);
-  opacity: 0.3;
-  /* margin-left:10%; */
-  /* background-color:rgba(55,55,55,0.89); */
+  opacity: 0.7;
+  @media screen and (max-width:960px){
+    margin-left:auto;
+    margin-right:auto;
+    width:90vw;
+    height:40vh;
+    border-radius:0;
+  }
 `;
 
 function OurService(props) {
