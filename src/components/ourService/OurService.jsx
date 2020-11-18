@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Marginer } from '../marginer';
-import Office  from '../../assets/pictures/Offices.jpg'
 
 const ServiceWrap = styled.section`
   margin-left:auto;
@@ -45,9 +44,9 @@ const Description = styled.p`
 `;
 const ServiceImg = styled.div`
   min-width:30vw;
-  background:${({srcImg}) => (srcImg ? "url('${srcImg}') no-repeat right" : '')};
+  background:${props => `url(${props.srcImg}) no-repeat center`};
   background-size: contain;
-  /* opacity: 0.7; */
+  opacity: 0.7;
   margin-left:2vh;
   @media screen and (max-width:960px){
     margin-left:auto;
@@ -55,9 +54,6 @@ const ServiceImg = styled.div`
     width:90vw;
     height:40vh;
     border-radius:0;
-    
-    background-size: contain;
-    margin-left:0;
 
   }
 `;
@@ -71,7 +67,6 @@ function OurService(props) {
         <Description>{description}</Description>
       </Service>
       <ServiceImg 
-      // style={{background:"url('${image}') no-repeat right"}}
       srcImg={srcImg}
       ></ServiceImg>
     </ServiceWrap>

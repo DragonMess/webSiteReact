@@ -21,8 +21,18 @@ function ServicesSection(porps) {
       <OurService 
       title= {"Entretien Comercial"}
       description={'Lorem Camilo ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!'}
-      srcImg={'../../assets/pictures/Offices.jpg'}
-      ></OurService>
+      srcImg={'../Offices.jpg'}
+      />
+      <OurService 
+      title= {"Entretien Industrial"}
+      description={'Lorem Camilo ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!'}
+      srcImg={'../Factory.jpg'}
+      />
+      <OurService 
+      title= {"Entretien Apres Construction"}
+      description={'Lorem Camilo ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!'}
+      srcImg={'../Construction.jpg'}
+      />
       
     </ServicesContainer>
   )
