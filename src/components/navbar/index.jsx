@@ -90,7 +90,7 @@ function Navbar(props) {
   const handleClick = ()=> {
     setClick(!click);
   }
-  console.log(click)
+  // console.log(click)
   return (
     <NavBarWrapper>
       <Marginer direction="horizontal" margin="0" />

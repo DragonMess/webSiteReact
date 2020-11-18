@@ -45,9 +45,9 @@ const Description = styled.p`
 `;
 const ServiceImg = styled.div`
   min-width:30vw;
-  background:url('${Office}') no-repeat right;
+  background:${({srcImg}) => (srcImg ? "url('${srcImg}') no-repeat right" : '')};
   background-size: contain;
-  opacity: 0.7;
+  /* opacity: 0.7; */
   margin-left:2vh;
   @media screen and (max-width:960px){
     margin-left:auto;
@@ -55,7 +55,7 @@ const ServiceImg = styled.div`
     width:90vw;
     height:40vh;
     border-radius:0;
-    background:url('${Office}') no-repeat center;
+    
     background-size: contain;
     margin-left:0;
 
@@ -63,24 +63,18 @@ const ServiceImg = styled.div`
 `;
 
 function OurService(props) {
+  const { title , description , srcImg} = props;
   return (
-    <div>
     <ServiceWrap>
-      <Service>
-        <Title>Entretien Comercial</Title>
-        <Description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!</Description>
+      <Service srcImg={srcImg}>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
       </Service>
-      <ServiceImg ></ServiceImg>
+      <ServiceImg 
+      // style={{background:"url('${image}') no-repeat right"}}
+      srcImg={srcImg}
+      ></ServiceImg>
     </ServiceWrap>
-        <ServiceWrap>
-      <Service>
-        <Title>Entretien Comercial</Title>
-        <Description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!</Description>
-      </Service>
-      <ServiceImg ></ServiceImg>
-    </ServiceWrap>
-
-    </div>
   )
 }
 
