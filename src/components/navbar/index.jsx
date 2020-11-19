@@ -95,7 +95,7 @@ function Navbar(props) {
     <NavBarWrapper>
       <Marginer direction="horizontal" margin="0" />
       <BrandWrapper>
-        <Logo inLine ></Logo>
+        <Logo inLine={"nav"} ></Logo>
       </BrandWrapper>
         <MobileIcon onClick={handleClick}>{click? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faTimes} />}
         </MobileIcon>

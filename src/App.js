@@ -3,6 +3,7 @@ import Homepage from "./containers/homepage/index.jsx";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navbar from "./components/navbar";
 import PageContainer from "./containers/pageCointainer";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/soumission" component="" />
             <Route path="/a_propos" component="" />
           </Switch>
+          <Footer />
         </PageContainer>
       </Router>
     </div>
