@@ -19,7 +19,7 @@ function ServicesSection(porps) {
     <ServicesContainer name="servicesSection">
       <SectionTitle>Services</SectionTitle>
       <OurService 
-      title= {"Entretien Comercial"}
+      title= {"Entretien Commercial"}
       description={'Lorem Camilo ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!'}
       srcImg={'../Offices.jpg'}
       />
@@ -29,7 +29,7 @@ function ServicesSection(porps) {
       srcImg={'../Factory.jpg'}
       />
       <OurService 
-      title= {"Entretien Apres Construction"}
+      title= {"Entretien après Construction"}
       description={'Lorem Camilo ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!'}
       srcImg={'../Construction.jpg'}
       />

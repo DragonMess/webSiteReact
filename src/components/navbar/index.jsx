@@ -74,10 +74,10 @@ const MobileIcon = styled.div`
   @media screen and (max-width:960px){
     display:block;
     position:absolute;
-    top:0;
-    right:0;
+    top:2vh;
+    right:3vh;
     transform:translate(-100,60%);
-    font-size:2vh;
+    font-size:3vh;
     text-align:center;  
     cursor: pointer;
   }
