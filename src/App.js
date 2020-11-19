@@ -17,7 +17,6 @@ function App() {
             <Route path="/soumission" component="" />
             <Route path="/a_propos" component="" />
           </Switch>
-          <Footer />
         </PageContainer>
       </Router>
     </div>

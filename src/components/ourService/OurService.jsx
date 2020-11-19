@@ -9,12 +9,13 @@ const ServiceWrap = styled.section`
   flex-direction:row;
   width:70%;
   min-height:30vh;
+  max-height:100vh;
   margin-bottom:10vh;
   @media screen and (max-width:960px){
     display:flex;
     flex-direction:column;
     width:100%;
-    height:90vh;
+    min-height:70vh;
     margin-bottom:-3vh;
 
   }
@@ -29,7 +30,7 @@ const Service = styled.div`
     width:90vw;
     height:40vh;
     border-radius:0;
-    margin-bottom:1vh;
+    /* margin-bottom:1vh; */
   }
 `;
 const Title = styled.h3`
@@ -44,14 +45,15 @@ const Description = styled.p`
   color:#7A7A7A;
   margin:0;
     @media screen and (max-width:960px){
-      margin-bottom:0vh;
+      /* margin-bottom:1vh; */
       font-size:2.5vh;
-
       }
 
 `;
 const ServiceImg = styled.div`
   min-width:30vw;
+  max-height:30vh;
+  /* background-color:red; */
   background:${props => `url(${props.srcImg}) no-repeat center`};
   background-size: contain;
   opacity: 0.7;

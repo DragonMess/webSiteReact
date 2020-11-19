@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/footer';
 import PageContainer from '../pageCointainer/index'
 import TopSection from '../TopSection';
 import ServicesSection from './services';
@@ -9,6 +10,7 @@ function Homepage() {
 <>
   <TopSection/>
   <ServicesSection/>
+  <Footer />
 </>
   )
 }
