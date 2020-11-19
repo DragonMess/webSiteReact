@@ -7,7 +7,7 @@ import SectionTitle from '../../components/sectionTitle';
 
 const ServicesContainer = styled(Element)`
   width:100%;
-  min-height:1500px;
+  max-height:1000vh;
   display:flex;
   flex-direction:column;
   align-items:center;
