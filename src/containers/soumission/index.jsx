@@ -4,17 +4,27 @@ import styled from 'styled-components'
 import Footer from '../../components/footer';
 import { theme } from '../../theme';
 import SectionTitle from '../../components/sectionTitle';
-
+import backgroundImg from '../../assets/pictures/Escobando.jpg'
 const ContainerContact = styled.div`
-  padding-top:5vh;
-  min-height:100vh;
-  background:rgb(57, 77, 73,.5);
+  padding:0vh;
   text-align:center;
-  /* display:flex; */
-/* flex-direction:column; */
-justify-items:center;
+  width:100%;
+  height:100vh;
+  background-image: url(${backgroundImg});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;   
 `;
-
+const BackgroundFilter = styled.div`
+  width:100%;
+  height:100vh;
+  background-color:rgba(55,55,55,0.5);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  align-content:center;
+  position:relative;
+`;
 const FormWrapper = styled.div`
 padding-top:3vh;
 width:500px;
@@ -22,11 +32,10 @@ max-width:80%;
 display:flex;
 flex-direction:column;
 align-items:center;
-margin:auto;
+margin-top:0;
 border-radius:2vh;
 text-align:left;
-background-color:white;
-
+background-color:rgb(0, 185, 151,.5);
 `;
 
 const FormEmail = styled.form`
@@ -49,6 +58,7 @@ const TextAreaEmail = styled.textarea`
 function Soumission() {
   return (
     <ContainerContact >
+      <BackgroundFilter>
       <SectionTitle>Soumission</SectionTitle>
       <FormWrapper>
       <FormEmail  method="POST" encType="multipart/form-data" name="EmailForm">
@@ -61,6 +71,7 @@ function Soumission() {
         <Button size={"small"}>Submit</Button>
       </FormEmail>
       </FormWrapper>
+      </BackgroundFilter>
     </ContainerContact>
   )
 }

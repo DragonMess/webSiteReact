@@ -15,7 +15,6 @@ const TopContainer = styled.div`
   background-image: url(${backgroundImg});
   background-repeat: no-repeat;
   background-attachment: fixed;
-  // background-size: cover;
   background-size: 100% 100%;   
 
    @media screen and (max-width:960px){
