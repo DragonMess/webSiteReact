@@ -10,7 +10,7 @@ const FooterWrapper = styled.div`
    bottom: -2vh;
    width: 100%;
    max-height:100vh;
-   background-color:#3a3939;
+   background-color:rgb(34,34,34);
    color: white;
    display:flex;
    flex-direction:column;

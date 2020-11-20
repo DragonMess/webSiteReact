@@ -62,7 +62,7 @@ const LinksTxt = styled(Link)`
     margin-bottom:20px;
     margin-top:20px;
       &:hover,&:focus{
-    color:black;
+    color:${theme.logo};
     font-weight:bold;
     font-size:3vh;
   }
