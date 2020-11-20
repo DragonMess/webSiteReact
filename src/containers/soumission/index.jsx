@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Footer from '../../components/footer';
 import { theme } from '../../theme';
 import SectionTitle from '../../components/sectionTitle';
-import backgroundImg from '../../assets/pictures/Escobando.jpg'
+import backgroundImg from '../../assets/pictures/CleaningService.jpg'
 const ContainerContact = styled.div`
   padding:0vh;
   text-align:center;
@@ -18,7 +18,7 @@ const ContainerContact = styled.div`
 const BackgroundFilter = styled.div`
   width:100%;
   height:100vh;
-  background-color:rgba(55,55,55,0.5);
+  background-color:rgba(55,55,55,0.8);
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -39,19 +39,21 @@ background-color:rgb(0, 185, 151,.5);
 `;
 
 const FormEmail = styled.form`
-  /* background-color:red; */
-  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  width:90%;
   padding:2vh;
 `;
 
 const InputName = styled.input`
-  /* background-color:yellow; */
-  color:red;
+  width:80%;
+  color:rgb(8, 122, 122);
 `;
 
 const TextAreaEmail = styled.textarea`
-  /* background-color:black; */
-  color:yellow;
+width:80%;
+  max-width:80%;
+  color:rgb(8, 122, 122);
 `;
 
 
@@ -59,16 +61,30 @@ function Soumission() {
   return (
     <ContainerContact >
       <BackgroundFilter>
-      <SectionTitle>Soumission</SectionTitle>
+      <h2 style={{color:"white" , marginTop:"10vh"}}>Soumission</h2>
       <FormWrapper>
       <FormEmail  method="POST" encType="multipart/form-data" name="EmailForm">
-        <label>Name:</label><br/>
-        <InputName type="text"  name="ContactName"></InputName>
+        <label style={{color:"white", fontWeight:"bold"}}>Nom:</label><br/>
+        <InputName type="name"  name="ContactName"></InputName>
         <br/><br/>
+        <label style={{color:"white", fontWeight:"bold"}}>Email:</label><br/>
+        <InputName type="email"  name="ContactEmail"></InputName>
+        <br/><br/>
+        <label style={{color:"white", fontWeight:"bold"}}>Message:</label><br/>
         <TextAreaEmail name="ContactCommentt" rows="6" cols="20"></TextAreaEmail>
         <br/><br/>
         {/* <input type="submit" value="Submit"/> */}
-        <Button size={"small"}>Submit</Button>
+        <label style={{color:"white", fontWeight:"bold"}}>Sélectionner le service:</label><br/>
+        <select name="cars" id="cars">
+          <option value="volvo">Entretien Commercial</option>
+          <option value="saab">Entretien Industriel</option>
+          <option value="opel">Entretien après Construction</option>
+          <option value="audi">Nettoyage des vitres</option>
+          <option value="audi">Décapage & Cirage de Plancher</option>
+          <option value="audi">Autre</option>
+        </select>
+      <br/><br/>
+        <Button size={"small"}>Soumettre</Button>
       </FormEmail>
       </FormWrapper>
       </BackgroundFilter>
