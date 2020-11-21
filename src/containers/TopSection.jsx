@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Element, scroller } from 'react-scroll';
 import styled from 'styled-components'
 import backgroundImg from '../assets/pictures/buildings.jpg'
@@ -8,7 +8,7 @@ import Logo from '../components/logo';
 import { Marginer } from '../components/marginer';
 import Social from '../components/social';
 
-const TopContainer = styled.div`
+const TopContainer = styled.article`
   width:100%;
   height:100vh;
   padding:0;
@@ -57,15 +57,19 @@ function TopSection() {
     scroller.scrollTo("servicesSection",{smooth:true, duration:1500})
   }
 
+  const [ classChange , setClassChange ] = useState("slogan")
+  const handleAnimation = ()=> {
+    setClassChange("slogan1")
+  }
   return (
-    <Element name="topSection">
-    <TopContainer>
+    <Element name="topSection" >
+    <TopContainer id="home">
       <BackgroundFilter>
         <Marginer direction="vertical" margin="9vh" />
-        <Logo/>
+        <Logo />
         <Marginer direction="vertical" margin="3vh" />
-        <SloganTxt>ENTRETIEN MÉNAGER COMMERCIAL</SloganTxt>
-        <SloganTxt>ET INDUSTRIEL</SloganTxt>
+        <SloganTxt className={classChange} onLoad={handleAnimation}>ENTRETIEN MÉNAGER COMMERCIAL</SloganTxt>
+        <SloganTxt className="slogan2">ET INDUSTRIEL</SloganTxt>
         <Marginer direction="vertical" margin="4vh" />
         <Button size='big'>OBTENIR UNE ESTIMATION</Button>
          <Marginer direction="vertical" margin="2vh" />
@@ -74,7 +78,6 @@ function TopSection() {
           <DownArrow />
         </DownArrowContainer>
       </BackgroundFilter>
-
     </TopContainer>
     </Element>
   )

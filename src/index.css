@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -15,4 +18,27 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slogan1 {
+  /* This section calls the slideInFromLeft animation we defined above */
+  /* transform: translate(-10000px, 0px); */
+  /* transition: translate(-10000px) 2s; */
+  visibility: visible;
+  animation: 20s ease-out 2s 1 slideInFromLeft;
+  /* transform: translate(0px); */
+
+  /* background: #333;
+  padding: 30px; */
+}
+.slogan {
+  /* visibility: hidden; */
 }

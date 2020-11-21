@@ -7,10 +7,9 @@ function Homepage() {
   return (
 <>
   <TopSection/>
-  <ServicesSection/>
-  <Footer />
+  <ServicesSection />
+  <Footer  />
 </>
   )
 }
-
 export default Homepage

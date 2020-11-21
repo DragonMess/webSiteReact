@@ -17,8 +17,8 @@ const ServicesContainer = styled(Element)`
 
 function ServicesSection(porps) {
   return (
-    <ServicesContainer name="servicesSection" >
-      <SectionTitle id="service">Services</SectionTitle>
+    <ServicesContainer name="servicesSection" id="service"  >
+      <SectionTitle >Services</SectionTitle>
       <OurService 
       title= {"Entretien Commercial"}
       description={'Lorem Camilo ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!'}

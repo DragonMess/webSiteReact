@@ -7,7 +7,6 @@ import { theme } from '../../theme';
 import Logo from '../logo';
 import { Marginer } from '../marginer';
 import { Element, scroller } from 'react-scroll';
-import { Link as LinkR} from 'react-scroll';
 
 const NavBarWrapper = styled.div`
   position:fixed;
@@ -24,7 +23,7 @@ const NavBarWrapper = styled.div`
     background-color:green;
   } */
 `;
-const BrandWrapper = styled(Link)`
+const BrandWrapper = styled.a`
   padding-top:1.5vh;
   display:flex;
   flex-direction:row;
@@ -52,7 +51,7 @@ const LinksWrapper = styled.div`
 
   }
 `;
-const LinksTxt = styled(Link)`
+const LinksTxt = styled.a`
   color:white;
   font-size:calc(2px + 1.5vh);
   text-decoration:none;
@@ -94,28 +93,22 @@ function Navbar(props) {
   const handleClick = ()=> {
     setClick(!click);
   }
-    const scrollDownNext = () => {
-    scroller.scrollTo("servicesSection",{smooth:true, duration:1500})
-  }
-
   return (
     <NavBarWrapper>
-      <Marginer direction="horizontal" margin="0" />
-      
-      <BrandWrapper to="/">
-      {/* <Link to="/"> */}
+      <Marginer direction="horizontal" margin="0" />  
+      <BrandWrapper href="./#home">
         <Logo inLine={"nav"} ></Logo>
-        {/* </Link> */}
       </BrandWrapper>
         <MobileIcon onClick={handleClick}>{click? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faTimes} />}
         </MobileIcon>
-      <LinksWrapper to="/" click={click}>
-        <LinksTxt onClick={scrollDownNext}>SERVICES</LinksTxt>
-        <LinksTxt to="/soumission">SOUMISSION</LinksTxt>
+      <LinksWrapper href="/" click={click}>
+         <LinksTxt href="./#service">
+          SERVICES
+         </LinksTxt>
+        <LinksTxt href="/soumission">SOUMISSION</LinksTxt>
         <LinksTxt>À PROPOS</LinksTxt>
         <LinksTxt>CONTACT</LinksTxt>
       </LinksWrapper>
-
       <Marginer direction="horizontal" margin="0" />
     </NavBarWrapper>
       
