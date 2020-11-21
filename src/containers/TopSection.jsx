@@ -68,7 +68,7 @@ function TopSection() {
         <Marginer direction="vertical" margin="9vh" />
         <Logo />
         <Marginer direction="vertical" margin="3vh" />
-        <SloganTxt className={classChange} onLoad={handleAnimation}>ENTRETIEN MÉNAGER COMMERCIAL</SloganTxt>
+        <SloganTxt className="slogan1">ENTRETIEN MÉNAGER COMMERCIAL</SloganTxt>
         <SloganTxt className="slogan2">ET INDUSTRIEL</SloganTxt>
         <Marginer direction="vertical" margin="4vh" />
         <Button size='big'>OBTENIR UNE ESTIMATION</Button>
