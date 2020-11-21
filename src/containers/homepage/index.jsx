@@ -4,7 +4,6 @@ import TopSection from '../TopSection';
 import ServicesSection from './services';
 
 function Homepage() {
-  console.log("here")
   return (
 <>
   <TopSection/>

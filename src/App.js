@@ -17,6 +17,7 @@ function App() {
             <Route path="/contact" component="" />
             <Route path="/soumission" component={Soumission} />
             <Route path="/a_propos" component="" />
+            <Link to="./#service"></Link>
           </Switch>
         </PageContainer>
       </Router>

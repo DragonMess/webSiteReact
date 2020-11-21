@@ -73,8 +73,7 @@ function Soumission() {
         <label style={{color:"white", fontWeight:"bold"}}>Message:</label><br/>
         <TextAreaEmail name="ContactCommentt" rows="6" cols="20"></TextAreaEmail>
         <br/><br/>
-        {/* <input type="submit" value="Submit"/> */}
-        <label style={{color:"white", fontWeight:"bold"}}>Sélectionner le service:</label><br/>
+        <label style={{color:"white", fontWeight:"bold"}}>Sélectionnez le service:</label><br/>
         <select name="cars" id="cars">
           <option value="volvo">Entretien Commercial</option>
           <option value="saab">Entretien Industriel</option>

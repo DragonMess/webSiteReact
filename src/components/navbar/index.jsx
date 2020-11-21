@@ -6,6 +6,8 @@ import styled from 'styled-components'
 import { theme } from '../../theme';
 import Logo from '../logo';
 import { Marginer } from '../marginer';
+import { Element, scroller } from 'react-scroll';
+import { Link as LinkR} from 'react-scroll';
 
 const NavBarWrapper = styled.div`
   position:fixed;
@@ -22,9 +24,11 @@ const NavBarWrapper = styled.div`
     background-color:green;
   } */
 `;
-const BrandWrapper = styled.div`
+const BrandWrapper = styled(Link)`
+  padding-top:1.5vh;
   display:flex;
   flex-direction:row;
+  text-decoration:none;
 `;
 const LinksWrapper = styled.div`
   min-width:500px;
@@ -32,7 +36,7 @@ const LinksWrapper = styled.div`
   flex-direction:row;
   justify-content:space-between;
   align-items:center;
-  /* text-align:center; */
+
   @media screen and (max-width:960px){
     display:flex;
     flex-direction:column;
@@ -90,18 +94,24 @@ function Navbar(props) {
   const handleClick = ()=> {
     setClick(!click);
   }
-  // console.log(click)
+    const scrollDownNext = () => {
+    scroller.scrollTo("servicesSection",{smooth:true, duration:1500})
+  }
+
   return (
     <NavBarWrapper>
       <Marginer direction="horizontal" margin="0" />
-      <BrandWrapper>
+      
+      <BrandWrapper to="/">
+      {/* <Link to="/"> */}
         <Logo inLine={"nav"} ></Logo>
+        {/* </Link> */}
       </BrandWrapper>
         <MobileIcon onClick={handleClick}>{click? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faTimes} />}
         </MobileIcon>
-      <LinksWrapper click={click}>
-        <LinksTxt to="">SERVICES</LinksTxt>
-        <LinksTxt>SOUMISSION</LinksTxt>
+      <LinksWrapper to="/" click={click}>
+        <LinksTxt onClick={scrollDownNext}>SERVICES</LinksTxt>
+        <LinksTxt to="/soumission">SOUMISSION</LinksTxt>
         <LinksTxt>À PROPOS</LinksTxt>
         <LinksTxt>CONTACT</LinksTxt>
       </LinksWrapper>
