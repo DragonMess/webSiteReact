@@ -5,6 +5,7 @@ import Navbar from "./components/navbar";
 import PageContainer from "./containers/pageCointainer";
 import Footer from "./components/footer";
 import Soumission from "./containers/soumission";
+import Contact from "./containers/contact";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <PageContainer>
           <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route path="/contact" component="" />
+            <Route path="/contact" component={Contact} />
             <Route path="/soumission" component={Soumission} />
             <Route path="/a_propos" component="" />
             <Link to="./#service"></Link>

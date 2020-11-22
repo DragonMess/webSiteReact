@@ -106,8 +106,8 @@ function Navbar(props) {
           SERVICES
          </LinksTxt>
         <LinksTxt href="/soumission">SOUMISSION</LinksTxt>
-        <LinksTxt>À PROPOS</LinksTxt>
-        <LinksTxt>CONTACT</LinksTxt>
+        <LinksTxt href="/apropos">À PROPOS</LinksTxt>
+        <LinksTxt href="/contact">CONTACT</LinksTxt>
       </LinksWrapper>
       <Marginer direction="horizontal" margin="0" />
     </NavBarWrapper>
