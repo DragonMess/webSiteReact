@@ -1,7 +1,6 @@
 import React from 'react'
 import { Element } from 'react-scroll';
 import styled from 'styled-components'
-import { Marginer } from '../../components/marginer';
 import OurService from '../../components/ourService/OurService';
 import SectionTitle from '../../components/sectionTitle';
 
@@ -17,21 +16,22 @@ const ServicesContainer = styled(Element)`
 
 function ServicesSection(porps) {
   return (
+    //  RED Entretien est spécialisée dans les contrats d’entretien de bureaux et de commerces.
     <ServicesContainer name="servicesSection" id="service"  >
       <SectionTitle >Services</SectionTitle>
       <OurService 
       title= {"Entretien Commercial"}
-      description={'Lorem Camilo ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!'}
+      description={"Nous vous offrons des forfaits d'entretien personnalisés pour que vous gardiez l'environement de travail sain et propre."}
       srcImg={'../Offices.jpg'}
       />
       <OurService 
       title= {"Entretien Industriel"}
-      description={'Lorem Camilo ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!'}
+      description={'Nous vous proposons une expertise dans le secteur du nettoyage industriel pour gardez vos spaces de travail dans les meilleures conditions.'}
       srcImg={'../Factory.jpg'}
       />
       <OurService 
       title= {"Entretien après Construction"}
-      description={'Lorem Camilo ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta nulla doloremque, quidem reprehenderit maxime minus adipisci vel ea corporis!'}
+      description={"Peu importe l'ampleur des travaux après construction, notre équipe vous offre un service d’une excellente qualité."}
       srcImg={'../Construction.jpg'}
       />
       

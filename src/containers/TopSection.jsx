@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Element, scroller } from 'react-scroll';
 import styled from 'styled-components'
 import backgroundImg from '../assets/pictures/buildings.jpg'
@@ -54,13 +54,9 @@ const DownArrowContainer = styled.div`
 function TopSection() {
 
   const scrollDownNext = () => {
-    scroller.scrollTo("servicesSection",{smooth:true, duration:1500})
+    scroller.scrollTo("servicesSection",{smooth:false, duration:5000})
   }
 
-  const [ classChange , setClassChange ] = useState("slogan")
-  const handleAnimation = ()=> {
-    setClassChange("slogan1")
-  }
   return (
     <Element name="topSection" >
     <TopContainer id="home">
