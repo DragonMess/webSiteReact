@@ -11,7 +11,7 @@ const SocialWrapper = styled.div`
   justify-content:space-evenly;
 `;
 
-const SocialIcon = styled.div`
+const SocialIcon = styled.a`
   margin-top:4px;
   color:#fff;
   font-size:35px;
@@ -28,13 +28,13 @@ const SocialIcon = styled.div`
 function Social() {
   return (
     <SocialWrapper>
-      <SocialIcon>
+      <SocialIcon href="https://www.facebook.com/">
         <FontAwesomeIcon icon={faFacebook}/>
       </SocialIcon>
-      <SocialIcon>
+      <SocialIcon href="https://www.linkedin.com/">
         <FontAwesomeIcon icon={faLinkedin}/>
       </SocialIcon>
-      <SocialIcon>
+      <SocialIcon href="https://www.instagram.com/">
         <FontAwesomeIcon icon={faInstagram}/>
       </SocialIcon>
     </SocialWrapper>

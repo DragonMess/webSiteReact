@@ -2,9 +2,8 @@ import React from 'react'
 import  Button  from '../../components/button/index';
 import styled from 'styled-components'
 import Footer from '../../components/footer';
-import { theme } from '../../theme';
-import SectionTitle from '../../components/sectionTitle';
 import backgroundImg from '../../assets/pictures/CleaningService.jpg'
+
 const ContainerContact = styled.div`
   padding:0vh;
   text-align:center;
@@ -32,10 +31,20 @@ max-width:80%;
 display:flex;
 flex-direction:column;
 align-items:center;
-margin-top:0;
+margin:15vh auto;
 border-radius:2vh;
 text-align:left;
 background-color:rgb(0, 185, 151,.5);
+`;
+const ContactHeader = styled.header`
+  color:#fff;
+  font-weight:700;
+  font-size:calc(10px + 5vh);
+  text-align:center;
+  padding-top:1vh;
+  @media screen and (max-width:960px){
+    font-size:calc(10px + 3vh);
+  }
 `;
 
 const FormEmail = styled.form`
@@ -47,22 +56,30 @@ const FormEmail = styled.form`
 
 const InputName = styled.input`
   width:80%;
-  color:rgb(8, 122, 122);
+  /* color:rgb(8, 122, 122); */
+  color:#fff;
+  background-color:rgb(0, 185, 151,.5);
 `;
 
 const TextAreaEmail = styled.textarea`
 width:80%;
   max-width:80%;
-  color:rgb(8, 122, 122);
+  /* color:rgb(8, 122, 122); */
+  color:#fff;
+  background-color:rgb(0, 185, 151,.5);
 `;
 
 
 function Soumission() {
   return (
+    <>
     <ContainerContact >
       <BackgroundFilter>
-      <h2 style={{color:"white" , marginTop:"10vh"}}>Soumission</h2>
+      {/* <h2 style={{color:"white" , marginTop:"10vh"}}>Soumission</h2> */}
       <FormWrapper>
+        <ContactHeader>
+          Soumission
+        </ContactHeader>
       <FormEmail  method="POST" encType="multipart/form-data" name="EmailForm">
         <label style={{color:"white", fontWeight:"bold"}}>Nom:</label><br/>
         <InputName type="name"  name="ContactName"></InputName>
@@ -88,6 +105,8 @@ function Soumission() {
       </FormWrapper>
       </BackgroundFilter>
     </ContainerContact>
+    <Footer></Footer>
+    </>
   )
 }
 

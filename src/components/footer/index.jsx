@@ -4,8 +4,6 @@ import Logo from '../logo';
 import { Marginer } from '../marginer';
 
 const FooterWrapper = styled.div`
-   margin-top:10vh;
-   /* position: fixed; */
    left: 0;
    bottom: -2vh;
    width: 100%;
