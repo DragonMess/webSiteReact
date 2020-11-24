@@ -6,6 +6,7 @@ import { theme } from '../../theme';
 
 const SocialWrapper = styled.div`
   max-width:80%;
+  margin:auto;
   width:500px;
   display:flex;
   justify-content:space-evenly;

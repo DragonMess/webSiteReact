@@ -53,6 +53,10 @@ const FormEmail = styled.form`
   width:90%;
   padding:2vh;
 `;
+const LabelForm = styled.label`  /* text-align:left; */
+  color:#fff;
+  font-weight:bold;
+`;
 
 const InputName = styled.input`
   width:80%;
@@ -62,7 +66,7 @@ const InputName = styled.input`
 `;
 
 const TextAreaEmail = styled.textarea`
-width:80%;
+  width:80%;
   max-width:80%;
   /* color:rgb(8, 122, 122); */
   color:#fff;
@@ -81,16 +85,16 @@ function Soumission() {
           Soumission
         </ContactHeader>
       <FormEmail  method="POST" encType="multipart/form-data" name="EmailForm">
-        <label style={{color:"white", fontWeight:"bold"}}>Nom:</label><br/>
+        <LabelForm>Nom:</LabelForm><br/>
         <InputName type="name"  name="ContactName"></InputName>
         <br/><br/>
-        <label style={{color:"white", fontWeight:"bold"}}>Email:</label><br/>
+        <LabelForm>Email:</LabelForm><br/>
         <InputName type="email"  name="ContactEmail"></InputName>
         <br/><br/>
-        <label style={{color:"white", fontWeight:"bold"}}>Message:</label><br/>
+        <LabelForm>Message:</LabelForm><br/>
         <TextAreaEmail name="ContactCommentt" rows="6" cols="20"></TextAreaEmail>
         <br/><br/>
-        <label style={{color:"white", fontWeight:"bold"}}>Sélectionnez le service:</label><br/>
+        <LabelForm>Sélectionnez le service:</LabelForm><br/>
         <select name="cars" id="cars">
           <option value="volvo">Entretien Commercial</option>
           <option value="saab">Entretien Industriel</option>
