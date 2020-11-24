@@ -5,13 +5,13 @@ const Title = styled.h2`
   margin-top:9vh;
   font-size:34px;
   font-weight:700;
-  color:black;
+  color:${({colorFont})=> (colorFont==="white" ? "white" : "black")}; 
   /* text-align:center; */
 `;
 
 function SectionTitle(props) {
   return (
-<Title>{props.children}</Title>
+<Title {...props}>{props.children}</Title>
   )
 }
 

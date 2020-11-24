@@ -48,7 +48,6 @@ const Description = styled.p`
       /* margin-bottom:1vh; */
       font-size:2.5vh;
       }
-
 `;
 const ServiceImg = styled.div`
   min-width:30vw;
