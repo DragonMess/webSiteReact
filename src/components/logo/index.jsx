@@ -14,13 +14,13 @@ const LogoContainer = styled.div`
 
 const LogoImg = styled.img`
   /* width:8em; */
-  width:${({inLine})=> (inLine=="nav" ? "1.5em" : inLine=="footer"? "4em" : "8em" )};
-  height:${({inLine})=> (inLine=="nav" ? "1.5em" : inLine=="footer"? "4em" :"8em" )};
+  width:${({inLine})=> (inLine=="nav" ? "1.5em" : inLine=="footer"? "3em" : "8em" )};
+  height:${({inLine})=> (inLine=="nav" ? "1.5em" : inLine=="footer"? "3em" :"8em" )};
   margin-left:${({inLine})=> (inLine=="nav" ? "5px" : "0" )};
 
 `;
 const LogoTxt = styled.div`
-  margin-top:${({inLine})=> (inLine=="nav" ? "0" : "6px" )};
+  margin-top:${({inLine})=> (inLine=="nav" ? "0": inLine=="footer"? "3px" : "6px" )};
   font-size:${({inLine})=> (inLine=="nav" ? "calc(4px + 1.5vh)" :inLine=="footer"? "calc(10px + 2vw)": "calc(10px + 4vw)" )};
   margin-left:${({inLine})=> (inLine=="nav" ? "4px" : "0" )};
   text-align:center;

@@ -1,12 +1,10 @@
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { theme } from '../../theme';
 import Logo from '../logo';
 import { Marginer } from '../marginer';
-import { Element, scroller } from 'react-scroll';
 
 const NavBarWrapper = styled.div`
   position:fixed;

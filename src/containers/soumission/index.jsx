@@ -8,7 +8,7 @@ const ContainerContact = styled.div`
   padding:0vh;
   text-align:center;
   width:100%;
-  height:100vh;
+  max-height:100vh;
   background-image: url(${backgroundImg});
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -16,7 +16,7 @@ const ContainerContact = styled.div`
 `;
 const BackgroundFilter = styled.div`
   width:100%;
-  height:100vh;
+  max-height:100vh;
   background-color:rgba(55,55,55,0.8);
   display:flex;
   flex-direction:column;
@@ -31,7 +31,7 @@ max-width:80%;
 display:flex;
 flex-direction:column;
 align-items:center;
-margin:15vh auto;
+margin:10vh auto 3vh;
 border-radius:2vh;
 text-align:left;
 background-color:rgb(0, 185, 151,.5);
@@ -108,8 +108,9 @@ function Soumission() {
       </FormEmail>
       </FormWrapper>
       </BackgroundFilter>
+      <Footer></Footer>
     </ContainerContact>
-    <Footer></Footer>
+    
     </>
   )
 }
