@@ -60,7 +60,6 @@ const LabelForm = styled.label`  /* text-align:left; */
 
 const InputName = styled.input`
   width:80%;
-  /* color:rgb(8, 122, 122); */
   color:#fff;
   background-color:rgb(0, 185, 151,.5);
 `;
@@ -68,7 +67,6 @@ const InputName = styled.input`
 const TextAreaEmail = styled.textarea`
   width:80%;
   max-width:80%;
-  /* color:rgb(8, 122, 122); */
   color:#fff;
   background-color:rgb(0, 185, 151,.5);
 `;
@@ -79,7 +77,6 @@ function Soumission() {
     <>
     <ContainerContact >
       <BackgroundFilter>
-      {/* <h2 style={{color:"white" , marginTop:"10vh"}}>Soumission</h2> */}
       <FormWrapper>
         <ContactHeader>
           Soumission
@@ -104,7 +101,7 @@ function Soumission() {
           <option value="audi">Autre</option>
         </select>
       <br/><br/>
-        <Button size={"small"}>Soumettre</Button>
+        <Button size={"small"} backColor={"#E6503A"}>Soumettre</Button>
       </FormEmail>
       </FormWrapper>
       </BackgroundFilter>
