@@ -3,6 +3,7 @@ import  Button  from '../../components/button/index';
 import styled from 'styled-components'
 import Footer from '../../components/footer';
 import backgroundImg from '../../assets/pictures/CleaningService.jpg'
+import SectionTitle from '../../components/sectionTitle';
 
 const ContainerContact = styled.div`
   padding:0vh;
@@ -25,7 +26,7 @@ const BackgroundFilter = styled.div`
   position:relative;
 `;
 const FormWrapper = styled.div`
-padding-top:3vh;
+padding-top:0;
 width:500px;
 max-width:80%;
 display:flex;
@@ -35,16 +36,6 @@ margin:10vh auto 3vh;
 border-radius:2vh;
 text-align:left;
 background-color:rgb(0, 185, 151,.5);
-`;
-const ContactHeader = styled.header`
-  color:#fff;
-  font-weight:700;
-  font-size:calc(10px + 5vh);
-  text-align:center;
-  padding-top:1vh;
-  @media screen and (max-width:960px){
-    font-size:calc(10px + 3vh);
-  }
 `;
 
 const FormEmail = styled.form`
@@ -78,9 +69,7 @@ function Soumission() {
     <ContainerContact >
       <BackgroundFilter>
       <FormWrapper>
-        <ContactHeader>
-          Soumission
-        </ContactHeader>
+        <SectionTitle MarginTop={"2vh"}colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>Soumission</SectionTitle>
       <FormEmail  method="POST" encType="multipart/form-data" name="EmailForm">
         <LabelForm>Nom:</LabelForm><br/>
         <InputName type="name"  name="ContactName"></InputName>

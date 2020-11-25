@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Title = styled.h2`
-  margin-top:9vh;
+  margin-top:${({MarginTop}) => (MarginTop? `${MarginTop}`: "9vh")};
   font-size:${({FontSize}) => (FontSize? `${FontSize}`: "5.2vh")};
   font-weight:${({Fontweight}) => (Fontweight? `${Fontweight}`: "700")};
   color:${({colorFont}) => (colorFont? `${colorFont}`: "black")};

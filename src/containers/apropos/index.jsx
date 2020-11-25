@@ -44,12 +44,29 @@ const WrapSection = styled.section`
 
   }
 `;
+const Card = styled.section`
+  width:500px;
+  max-width:80%;
+  min-height:150px;
+  margin:15vh auto;
+  background-color:rgb(0, 185, 151,.5);
+  border-radius:2vh;
+  padding:0%;
+    @media screen and (max-width:960px){
+    max-width:90%;
+    margin:10vh auto;
+  }
+`;
 const Description = styled.p`
   font-size:3vh;
   font-weight:300;
+  line-height: 5vh;
   text-align:center;
   color:#fff;
-  margin:0;
+  margin:0 auto;
+  max-width:400px;
+  height:400px;
+  font-style: normal;
     @media screen and (max-width:960px){
       /* margin-bottom:1vh; */
       font-size:2.5vh;
@@ -59,13 +76,15 @@ function Apropos(props) {
   return (
     <MainContainer>
       <BackgroundFilter>
-      <SectionTitle colorFont={"white"} Fontweight={"700"} FontSize={"5vh"}>À propos de nous</SectionTitle>
+        <Card>
+      <SectionTitle colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>À propos de nous</SectionTitle>
       <WrapSection>
         <Description>
           RED ENTRETIEN est une entreprise de nettoyage dans le Grand Montréal spécialise dans le menage commercial et industriel. Depuis plus de 10 ans, notre équipe offre de services d'excelence. Notre but c'est la satisfaction de nos clients, c'est pourquoi nous offrons de service de nettoyage de qualité et de personnalisation.
         </Description>
 
       </WrapSection>
+      </Card>
       </BackgroundFilter>
     </MainContainer>
   )

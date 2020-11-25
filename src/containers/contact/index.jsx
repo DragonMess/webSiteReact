@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import backgroundImg from '../../assets/pictures/ContactUs.jpg'
 import Social from '../../components/social';
 import Footer from '../../components/footer'
+import SectionTitle from '../../components/sectionTitle';
 
 const ContactWarapper = styled.article`
   width:100%;
@@ -36,16 +37,7 @@ const ContactCard = styled.section`
     margin:10vh auto;
   }
 `;
-const ContactHeader = styled.header`
-  color:#fff;
-  font-weight:700;
-  font-size:calc(10px + 5vh);
-  text-align:center;
-  padding-top:1vh;
-  @media screen and (max-width:960px){
-    font-size:calc(10px + 3vh);
-  }
-`;
+
 const ContactHr = styled.hr`
   
   border: 1px solid #ffff;
@@ -71,9 +63,7 @@ function Contact(props) {
     <ContactWarapper>
       <BackgroundFilter>
       <ContactCard>
-        <ContactHeader>
-          Contactez-nous
-        </ContactHeader>
+        <SectionTitle MarginTop={"2vh"} colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>Contactez-nous</SectionTitle>
         <ContactHr/>
         <ContactWay>
           <FontAwesomeIcon icon={faPhoneAlt}/>
