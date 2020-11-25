@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import OurService from '../../components/ourService/OurService';
 import SectionTitle from '../../components/sectionTitle'
 import backgroundImg from '../../assets/pictures/Team.jpg'
+import Footer from '../../components/footer';
 
 
 const MainContainer = styled.div`
@@ -47,14 +48,17 @@ const WrapSection = styled.section`
 const Card = styled.section`
   width:500px;
   max-width:80%;
-  min-height:150px;
+  height:400px;
+  max-height:500px;
+  
   margin:15vh auto;
   background-color:rgb(0, 185, 151,.5);
   border-radius:2vh;
-  padding:0%;
+  padding:0 0 0vh 0;
     @media screen and (max-width:960px){
     max-width:90%;
     margin:10vh auto;
+    min-height:450px;
   }
 `;
 const Description = styled.p`
@@ -84,6 +88,7 @@ function Apropos(props) {
         </Description>
       </WrapSection>
       </Card>
+      <Footer></Footer>
       </BackgroundFilter>
     </MainContainer>
   )
