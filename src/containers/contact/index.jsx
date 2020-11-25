@@ -63,7 +63,7 @@ function Contact(props) {
     <ContactWarapper>
       <BackgroundFilter>
       <ContactCard>
-        <SectionTitle MarginTop={"2vh"} colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>Contactez-nous</SectionTitle>
+        <SectionTitle Margin={"0vh auto"} colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>Contactez-nous</SectionTitle>
         <ContactHr/>
         <ContactWay>
           <FontAwesomeIcon icon={faPhoneAlt}/>

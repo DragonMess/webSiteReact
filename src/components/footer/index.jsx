@@ -4,7 +4,6 @@ import Logo from '../logo';
 
 const FooterWrapper = styled.div`
    left: 0;
-   /* bottom: -2vh; */
    width: 100%;
    min-height:28vh;
    background-color:#3a3939;
@@ -15,17 +14,8 @@ const FooterWrapper = styled.div`
    padding:1%;
    margin:0;
 
-   /* p{
-          visibility:none;
-     display:none;
-   } */
    @media screen and (max-width:960px){
-     /* visibility:none;
-     display:none; */
-        p{
-          visibility:visible;
-     /* display:none; */
-   }
+    padding-top:0;
    }
 `;
 const Copyrigth = styled.p`

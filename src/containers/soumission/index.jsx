@@ -69,7 +69,7 @@ function Soumission() {
     <ContainerContact >
       <BackgroundFilter>
       <FormWrapper>
-        <SectionTitle MarginTop={"2vh"}colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>Soumission</SectionTitle>
+        <SectionTitle Margin={"3vh auto"}colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>Soumission</SectionTitle>
       <FormEmail  method="POST" encType="multipart/form-data" name="EmailForm">
         <LabelForm>Nom:</LabelForm><br/>
         <InputName type="name"  name="ContactName"></InputName>

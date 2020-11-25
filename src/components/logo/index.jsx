@@ -8,7 +8,7 @@ const LogoContainer = styled.div`
   flex-direction:${({inLine})=> (inLine ? "row" : "column" )};
   align-items:center;
     @media screen and (max-width:960px){
-    padding-top:${({inLine})=> (inLine=="nav" ? "0vh" : "15vh" )};
+    padding-top:${({inLine})=> (inLine=="nav" ? "0vh" : "1vh" )};
   }
 `;
 

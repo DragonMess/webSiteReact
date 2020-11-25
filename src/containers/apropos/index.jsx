@@ -65,7 +65,7 @@ const Description = styled.p`
   color:#fff;
   margin:0 auto;
   max-width:400px;
-  height:400px;
+  max-height:400px;
   font-style: normal;
     @media screen and (max-width:960px){
       /* margin-bottom:1vh; */
@@ -77,12 +77,11 @@ function Apropos(props) {
     <MainContainer>
       <BackgroundFilter>
         <Card>
-      <SectionTitle colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>À propos de nous</SectionTitle>
+      <SectionTitle colorFont={"white"} Fontweight={"700"} FontSize={"4vh"} Margin={"4vh auto"}>À propos de nous</SectionTitle>
       <WrapSection>
         <Description>
           RED ENTRETIEN est une entreprise de nettoyage dans le Grand Montréal spécialise dans le menage commercial et industriel. Depuis plus de 10 ans, notre équipe offre de services d'excelence. Notre but c'est la satisfaction de nos clients, c'est pourquoi nous offrons de service de nettoyage de qualité et de personnalisation.
         </Description>
-
       </WrapSection>
       </Card>
       </BackgroundFilter>
