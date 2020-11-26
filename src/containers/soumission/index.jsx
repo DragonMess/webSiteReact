@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Footer from '../../components/footer';
 import backgroundImg from '../../assets/pictures/CleaningService.jpg'
 import SectionTitle from '../../components/sectionTitle';
+import emailjs from 'emailjs-com'
 
 const ContainerContact = styled.div`
   padding:0vh;

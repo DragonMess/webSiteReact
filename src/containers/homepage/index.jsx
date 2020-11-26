@@ -8,7 +8,7 @@ function Homepage() {
 <>
   <TopSection/>
   <ServicesSection />
-  <Footer  />
+  {/* <Footer  /> */}
 </>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Element } from 'react-scroll';
 import styled from 'styled-components'
+import Footer from '../../components/footer';
 import OurService from '../../components/ourService/OurService';
 import SectionTitle from '../../components/sectionTitle';
 
@@ -34,7 +35,7 @@ function ServicesSection(porps) {
       description={"Peu importe l'ampleur des travaux après construction, notre équipe vous offre un service d’une excellente qualité."}
       srcImg={'../Construction.jpg'}
       />
-      
+      <Footer  />
     </ServicesContainer>
   )
 }

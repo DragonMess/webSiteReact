@@ -47,9 +47,9 @@ const WrapSection = styled.section`
 `;
 const Card = styled.section`
   width:500px;
-  max-width:80%;
-  height:400px;
-  max-height:500px;
+  /* max-width:80%; */
+  height:600px;
+  max-height:800px;
   
   margin:15vh auto;
   background-color:rgb(0, 185, 151,.5);
@@ -69,7 +69,7 @@ const Description = styled.p`
   color:#fff;
   margin:0 auto;
   max-width:400px;
-  max-height:400px;
+  min-height:30vh;
   font-style: normal;
     @media screen and (max-width:960px){
       /* margin-bottom:1vh; */
