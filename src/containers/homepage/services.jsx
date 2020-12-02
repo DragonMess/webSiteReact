@@ -12,7 +12,7 @@ const ServicesContainer = styled(Element)`
   display:flex;
   flex-direction:column;
   align-items:center;
-  padding: 10px 0;
+  padding: 15vh 0;
 `;
 
 function ServicesSection(porps) {

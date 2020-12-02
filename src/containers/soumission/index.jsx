@@ -5,6 +5,7 @@ import Footer from '../../components/footer';
 import backgroundImg from '../../assets/pictures/CleaningService.jpg'
 import SectionTitle from '../../components/sectionTitle';
 import emailjs from 'emailjs-com'
+import Modal from '../../components/modal';
 
 
 
@@ -88,9 +89,8 @@ function Soumission() {
     <ContainerContact >
       <BackgroundFilter>
 
-      {/* <form onSubmit={sendEmail}> */}
-      <FormWrapper 
-       >
+      <Modal> Merci! Votre message a été envoyé</Modal>
+      <FormWrapper>
         <SectionTitle Margin={"3vh auto"}colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>Soumission</SectionTitle>
       <FormEmail  onSubmit={sendEmail} name="EmailForm">
         <LabelForm>Nom:</LabelForm><br/>
@@ -112,10 +112,10 @@ function Soumission() {
           <option value="Autre">Autre</option>
         </select>
       <br/><br/>
-        <input           type="submit" value="Envoyer message"></input>
+        <input type="submit" value="Envoyer message"></input>
       </FormEmail>
       </FormWrapper>
-      {/* </form> */}
+
 
       </BackgroundFilter>
       <Footer></Footer>
