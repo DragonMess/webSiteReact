@@ -6,6 +6,8 @@ import backgroundImg from '../../assets/pictures/CleaningService.jpg'
 import SectionTitle from '../../components/sectionTitle';
 import emailjs from 'emailjs-com'
 
+
+
 const ContainerContact = styled.div`
   padding:0vh;
   text-align:center;
@@ -65,35 +67,56 @@ const TextAreaEmail = styled.textarea`
 
 
 function Soumission() {
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+
+    emailjs.sendForm("service_0baz35r", "template_qm2ceyl", e.target,"user_wWMLwLo0TYhE1YOCXmci9")
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+}
   return (
     <>
+
+
+
     <ContainerContact >
       <BackgroundFilter>
-      <FormWrapper>
+
+      {/* <form onSubmit={sendEmail}> */}
+      <FormWrapper 
+       >
         <SectionTitle Margin={"3vh auto"}colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>Soumission</SectionTitle>
-      <FormEmail  method="POST" encType="multipart/form-data" name="EmailForm">
+      <FormEmail  onSubmit={sendEmail} name="EmailForm">
         <LabelForm>Nom:</LabelForm><br/>
-        <InputName type="name"  name="ContactName"></InputName>
+        <InputName type="name"  name="ContactName" ></InputName>
         <br/><br/>
         <LabelForm>Email:</LabelForm><br/>
-        <InputName type="email"  name="ContactEmail"></InputName>
+        <InputName type="email"  name="ContactEmail" ></InputName>
         <br/><br/>
         <LabelForm>Message:</LabelForm><br/>
-        <TextAreaEmail name="ContactCommentt" rows="6" cols="20"></TextAreaEmail>
+        <TextAreaEmail name="ContactMessage" rows="6" cols="20" message="message"></TextAreaEmail>
         <br/><br/>
         <LabelForm>Sélectionnez le service:</LabelForm><br/>
-        <select name="cars" id="cars">
-          <option value="volvo">Entretien Commercial</option>
-          <option value="saab">Entretien Industriel</option>
-          <option value="opel">Entretien après Construction</option>
-          <option value="audi">Nettoyage des vitres</option>
-          <option value="audi">Décapage & Cirage de Plancher</option>
-          <option value="audi">Autre</option>
+        <select name="ContactService" id="cars" >
+          <option value="Entretien Commercial">Entretien Commercial</option>
+          <option value="Entretien Industriel">Entretien Industriel</option>
+          <option value="Entretien après Construction">Entretien après Construction</option>
+          <option value="Nettoyage des vitres">Nettoyage des vitres</option>
+          <option value="Décapage & Cirage de Plancher">Décapage & Cirage de Plancher</option>
+          <option value="Autre">Autre</option>
         </select>
       <br/><br/>
-        <Button size={"small"} backColor={"#E6503A"}>Soumettre</Button>
+        <input           type="submit" value="Envoyer message"></input>
       </FormEmail>
       </FormWrapper>
+      {/* </form> */}
+
       </BackgroundFilter>
       <Footer></Footer>
     </ContainerContact>
