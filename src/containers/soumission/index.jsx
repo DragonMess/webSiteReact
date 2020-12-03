@@ -83,20 +83,19 @@ function Soumission(props) {
     if(textEmail && textName && textMessage){
     
     console.log("lol")
-    // emailjs.sendForm("service_0baz35r", "template_qm2ceyl", e.target,"user_wWMLwLo0TYhE1YOCXmci9")
-    //   .then((result) => {
-    //       // console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
-    // e.target.reset();
+    emailjs.sendForm("service_0baz35r", "template_qm2ceyl", e.target,"user_wWMLwLo0TYhE1YOCXmci9")
+      .then((result) => {
+          // console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    e.target.reset();
     setModalHidden(true)
     setTextError("Merci! Votre message a été envoyé")
     
     }else {
       setModalHidden(true)
       setTextError("Some fields are empty");
-      // setModalHidden(!modalHidden)
     }      
 }
 
@@ -104,7 +103,6 @@ function Soumission(props) {
     <>
     <ContainerContact >
       <BackgroundFilter>
-        {/* {!modalHidden? <Modal>{textError}</Modal> : <div></div>} */}
   <Modal modalHidden={modalHidden}
   setModalHidden={setModalHidden}
   >{textError}</Modal>
