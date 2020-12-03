@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const ModalMessage = styled.div`
 
 .modal {
- display:none; 
+visibility:${({modalHidden})=>modalHidden === true? "visible" :"hidden"}; 
  /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -47,11 +47,15 @@ const ModalMessage = styled.div`
 
 function Modal(props) {
   return (
-    <ModalMessage>
+    <ModalMessage {...props}>
 
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
+<div  className="modal">
+  <div className="modal-content">
+    <span className="close"
+    onClick={()=> {props.setModalHidden(false)
+    }}
+    >&times;</span>
+    {/* <span className="closer">x</span> */}
     <p>{props.children}</p>
   </div>
 </div>

@@ -13,6 +13,11 @@ const ServicesContainer = styled(Element)`
   flex-direction:column;
   align-items:center;
   padding: 15vh 0;
+
+  .footer{
+    position:absolute;
+    bottom:0;
+  }
 `;
 
 function ServicesSection(porps) {
@@ -35,7 +40,7 @@ function ServicesSection(porps) {
       description={"Peu importe l'ampleur des travaux après construction, notre équipe vous offre un service d’une excellente qualité."}
       srcImg={'../Construction.jpg'}
       />
-      <Footer  />
+      <Footer className="footer"/>
     </ServicesContainer>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import  Button  from '../../components/button/index';
 import styled from 'styled-components'
 import Footer from '../../components/footer';
@@ -13,16 +13,16 @@ const ContainerContact = styled.div`
   padding:0vh;
   text-align:center;
   width:100%;
-  max-height:100vh;
+  height:100vh;
   background-image: url(${backgroundImg});
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;   
+  background-size: cover;   
 `;
 const BackgroundFilter = styled.div`
   width:100%;
-  max-height:100vh;
-  background-color:rgba(55,55,55,0.8);
+  height:100vh;
+  background-color:rgba(55,55,55,0.5);
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -67,40 +67,67 @@ const TextAreaEmail = styled.textarea`
 `;
 
 
-function Soumission() {
+function Soumission(props) {
+  const [textEmail, setTextEmail] = useState("");
+  const [textName, setTextName] = useState("");
+  const [textMessage, setTextMessage] = useState("");
+  const [textError, setTextError] = useState("");
+  const [modalHidden, setModalHidden] = useState(false);
+
+  function hidden() {
+
+  }
 
   function sendEmail(e) {
     e.preventDefault();
-
-
-    emailjs.sendForm("service_0baz35r", "template_qm2ceyl", e.target,"user_wWMLwLo0TYhE1YOCXmci9")
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      e.target.reset();
+    if(textEmail && textName && textMessage){
+    
+    console.log("lol")
+    // emailjs.sendForm("service_0baz35r", "template_qm2ceyl", e.target,"user_wWMLwLo0TYhE1YOCXmci9")
+    //   .then((result) => {
+    //       // console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+    // e.target.reset();
+    setModalHidden(true)
+    setTextError("Merci! Votre message a été envoyé")
+    
+    }else {
+      setModalHidden(true)
+      setTextError("Some fields are empty");
+      // setModalHidden(!modalHidden)
+    }      
 }
+
   return (
     <>
-
-
-
     <ContainerContact >
       <BackgroundFilter>
-
-      <Modal> Merci! Votre message a été envoyé</Modal>
+        {/* {!modalHidden? <Modal>{textError}</Modal> : <div></div>} */}
+  <Modal modalHidden={modalHidden}
+  setModalHidden={setModalHidden}
+  >{textError}</Modal>
       <FormWrapper>
         <SectionTitle Margin={"3vh auto"}colorFont={"white"} Fontweight={"700"} FontSize={"4vh"}>Soumission</SectionTitle>
       <FormEmail  onSubmit={sendEmail} name="EmailForm">
         <LabelForm>Nom:</LabelForm><br/>
-        <InputName type="name"  name="ContactName" ></InputName>
+        <InputName 
+        value={textName}
+        onChange={(e) => setTextName(e.target.value)}
+        type="text"  name="ContactName" ></InputName>
         <br/><br/>
-        <LabelForm>Email:</LabelForm><br/>
-        <InputName type="email"  name="ContactEmail" ></InputName>
+        <LabelForm >Email:</LabelForm><br/>
+        <InputName 
+        value={textEmail}
+        onChange={(e) => setTextEmail(e.target.value)}
+        type="email"  name="ContactEmail" ></InputName>
         <br/><br/>
         <LabelForm>Message:</LabelForm><br/>
-        <TextAreaEmail name="ContactMessage" rows="6" cols="20" message="message"></TextAreaEmail>
+        <TextAreaEmail 
+        value={textMessage}
+        onChange={(e) => setTextMessage(e.target.value)}
+        name="ContactMessage" rows="6" cols="20" message="message"></TextAreaEmail>
         <br/><br/>
         <LabelForm>Sélectionnez le service:</LabelForm><br/>
         <select name="ContactService" id="cars" >
@@ -112,15 +139,12 @@ function Soumission() {
           <option value="Autre">Autre</option>
         </select>
       <br/><br/>
-        <input type="submit" value="Envoyer message"></input>
+        <input type="submit" value="Envoyer message" style={{backgroundColor:"red", color:"white"}}></input>
       </FormEmail>
       </FormWrapper>
-
-
       </BackgroundFilter>
-      <Footer></Footer>
     </ContainerContact>
-    
+      <Footer></Footer>
     </>
   )
 }

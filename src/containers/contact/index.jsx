@@ -20,7 +20,7 @@ const BackgroundFilter = styled.div`
   width:100%;
   height:100vh;
   padding-top:5vh;
-  background-color:rgba(55,55,55,0.8);
+  background-color:rgba(55,55,55,0.5);
 
 `;
 

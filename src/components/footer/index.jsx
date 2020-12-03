@@ -4,7 +4,7 @@ import Logo from '../logo';
 
 const FooterWrapper = styled.div`
    width: 100%;
-   min-height:28vh;
+   min-height:18vh;
    background-color:#3a3939;
    color: white;
    display:flex;
@@ -12,7 +12,7 @@ const FooterWrapper = styled.div`
    align-items:center;
    justify-content:center;
    padding:1%;
-   margin:0;
+   margin:0 0 -18vh 0 ;
 
    @media screen and (max-width:960px){
     padding-top:0;
