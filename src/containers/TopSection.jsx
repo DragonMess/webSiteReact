@@ -17,6 +17,10 @@ const TopContainer = styled.article`
   background-attachment: fixed;
   background-size: 100% 100%;   
 
+  .link{
+    text-decoration:none;
+    color:#fff;
+  }
    @media screen and (max-width:960px){
     /* height:80vh; */
   }
@@ -52,11 +56,11 @@ const DownArrowContainer = styled.div`
 `;
 
 function TopSection() {
-
+  
   const scrollDownNext = () => {
     scroller.scrollTo("servicesSection",{smooth:false, duration:5000})
   }
-
+  
   return (
     <Element name="topSection" >
     <TopContainer id="home">
@@ -67,7 +71,7 @@ function TopSection() {
         <SloganTxt className="slogan1">ENTRETIEN MÉNAGER COMMERCIAL</SloganTxt>
         <SloganTxt className="slogan2">ET INDUSTRIEL</SloganTxt>
         <Marginer direction="vertical" margin="4vh" />
-        <Button size='big'>OBTENIR UNE ESTIMATION</Button>
+        <Button size='big'><a className="link" href="/soumission">OBTENIR UNE ESTIMATION</a></Button>
          <Marginer direction="vertical" margin="2vh" />
          <Social></Social>
         <DownArrowContainer onClick={scrollDownNext}>
